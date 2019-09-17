@@ -1,0 +1,15 @@
+{
+  "name": "react-webpack-babel-md-tutorial",
+  "version": "1.0.0",
+  "description": "a sample react app using webpack and babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eckysaroyd/MERNhomeStudy/tree/master/react-webpack-babel-md-tutorial"
+  },
+  "author": "eckysaroyd abuu nyato",
+  "license": "ISC"
+}
