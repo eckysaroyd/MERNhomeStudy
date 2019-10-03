@@ -1,0 +1,39 @@
+{
+  "name": "react-webpack-babel-md-tutorial",
+  "version": "1.0.0",
+  "description": "a sample react app using webpack and babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "babel-node ./node_modules/webpack/bin/webpack",
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eckysaroyd/MERNhomeStudy/tree/master/react-webpack-babel-md-tutorial"
+  },
+  "author": "eckysaroyd abuu nyato",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.6.2",
+    "@babel/node": "7.6.2",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.6.2",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.6",
+    "css-loader": "3.2.0",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "4.12.0",
+    "path": "0.12.7",
+    "sass-loader": "8.0.0",
+    "style-loader": "1.0.0",
+    "webpack": "4.40.2",
+    "webpack-cli": "3.3.9",
+    "webpack-dev-server": "3.8.1"
+  },
+  "dependencies": {
+    "react": "16.10.1",
+    "react-dom": "16.10.1"
+  }
+}
