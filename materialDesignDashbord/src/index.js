@@ -1,9 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// this line is new
-// we now have some nice styles on our react app
-import "index.scss";
-let HelloWorld = () => {
-  return <h1>Hello there World!</h1>;
-};
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+import { createHashHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
+
+import "assets/css/material-dashboard-react.css?v=1.5.0";
+
+import indexRoutes from "routes/index.jsx";
+
+const hist = createHashHistory();
+
+ReactDOM.render(
+  <Router history={hist}>
+    <Switch>
+      {indexRoutes.map((prop, key) => {
+        return <Route path={prop.path} component={prop.component} key={key} />;
+      })}
+    </Switch>
+  </Router>,
+  document.getElementById("root")
+);

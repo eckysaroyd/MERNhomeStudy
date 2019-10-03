@@ -33,7 +33,18 @@
     "webpack-dev-server": "3.8.1"
   },
   "dependencies": {
-    "react": "16.10.1",
-    "react-dom": "16.10.1"
+    "@material-ui/core": "3.1.0",
+    "@material-ui/icons": "3.0.1",
+    "@types/googlemaps": "3.30.11",
+    "@types/markerclustererplus": "2.1.33",
+    "chartist": "0.10.1",
+    "classnames": "2.2.6",
+    "perfect-scrollbar": "1.4.0",
+    "react": "16.5.2",
+    "react-chartist": "0.13.1",
+    "react-dom": "16.5.2",
+    "react-google-maps": "9.4.5",
+    "react-router-dom": "4.3.1",
+    "react-swipeable-views": "0.12.15"
   }
 }
