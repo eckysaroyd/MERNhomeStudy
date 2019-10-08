@@ -1,3 +1,5 @@
+// Code goes here
+
 // Code goes here through plunker
 
 var Product = React.createClass({
@@ -38,7 +40,13 @@ var Total = React.createClass({
 });
 var Productlist = React.createClass({
   getInitialState: function() {
-    return { total: 0 };
+    return {
+      total: 0,
+      productlist: [
+        { name: "iphone XR", price: 700, size: "64GB" },
+        { name: "iphone X1", price: 900, size: "512GB" }
+      ]
+    };
   },
 
   calculateTotal: function(price) {
@@ -50,36 +58,21 @@ var Productlist = React.createClass({
     alert("you select  " + name);
   },
   render: function() {
+    var component = this;
+    var products = this.state.productlist.map(function(product) {
+      return (
+        <Product
+          name={product.name}
+          price={product.price}
+          size={product.size}
+          handleshow={component.showProduct}
+          handleTotal={component.calculateTotal}
+        />
+      );
+    });
     return (
       <div>
-        <Product
-          name="iphone XR"
-          price={700}
-          size="64GB"
-          handleshow={this.showProduct}
-          handleTotal={this.calculateTotal}
-        />
-        <Product
-          name="iphone X1"
-          price={900}
-          size="512GB"
-          handleshow={this.showProduct}
-          handleTotal={this.calculateTotal}
-        />
-        <Product
-          name="iphone 8 plus"
-          price={600}
-          size="128GB"
-          handleshow={this.showProduct}
-          handleTotal={this.calculateTotal}
-        />
-        <Product
-          name="iphone Xs Max"
-          price={800}
-          size="512GB"
-          handleshow={this.showProduct}
-          handleTotal={this.calculateTotal}
-        />
+        {products}
         <Total total={this.state.total} />
       </div>
     );
