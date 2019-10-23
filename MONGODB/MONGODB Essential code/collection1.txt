@@ -1,0 +1,29 @@
+db.car.insert({
+    name: 'honda',
+    make: 'accord',
+    year: '2010'
+})
+
+db.car.update({
+    name: 'honda'
+    },
+    { $set: {
+     name: 'ford'
+    }
+})
+
+db.car.update({
+    name: 'ford'
+    },
+    { $set: {
+     transmission: 'automatic'
+    }
+}, {$upsert: true})
+
+
+db.users.insert({
+    name: 'jo',
+    email: 'me5@me.com',
+    password: '444',
+    role: 'admin'
+})
