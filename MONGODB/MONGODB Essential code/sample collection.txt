@@ -1,0 +1,39 @@
+db.student.insert({
+    name: 'Joe',
+    undergrad: true,
+    units: 9,
+    classes: ['geography', 'math', 'journalism']
+})
+
+db.student.insert({
+    name: 'Jane',
+    undergrad: false,
+    units: 12,
+    classes: ['geography', 'science', 'journalism', 'history']
+})
+
+db.student.insert({
+    name: 'Kevin',
+    undergrad: true,
+    units: 3,
+    classes: ['geography']
+})
+
+db.student.insert({
+    name: 'Rachel',
+    undergrad: false,
+    units: 6,
+    classes: ['geography', 'history']
+})
+
+db.student.find({})
+db.student.find({'name': 'Rachel'})
+db.student.find({units: {$gt: 6}})
+db.student.find({units: {$lt: 7}})
+db.student.find({classes: {$in: ['history']}})
+
+db.student.find({classes: {$in: ['history']}}).sort({units: -1})    // ascending
+db.student.find({}).sort({name: 1})    // descending
+
+db.student.find({}).sort({name: 1}).limit(2)
+
